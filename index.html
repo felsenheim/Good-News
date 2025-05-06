@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <div class="header-container">
+    <div class="header">
+      <img src="assets/images/placeholder.jpg" alt="Portfolio Header">
+      <div class="overlay"></div>
+    </div>
+  </div>
+  <!-- Intro text below the header image -->
+  <div class="intro-text" style="display: none;">
+    <p>Wir freuen uns auf euch!</p>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-header">Karte</div>
+      <div class="accordion-content">
+        <iframe
+            src="https://www.google.com/maps/d/embed?mid=15M5p_xdDCUSH6Cg5wmuYBPpLBK3JcXQ&ehbc=2E312F&noprof=1" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="map-legend">
+            <div><span class="legend-dot red"></span> Wichtige Veranstaltungspunkte</div>
+            <div><span class="legend-dot yellow"></span> Zürich Hauptbahnhof und Busbahnhof</div>
+            <div><span class="legend-dot blue"></span> Vorschläge für Unterkünfte</div>
+          
+            <div class="legend-footer">
+              <span class="legend-note">
+                Wenn du mit der Computermaus auf die Punkte klickst, bekommst du mehr Informationen.
+              </span>
+              <a href="https://www.google.com/maps/d/edit?mid=15M5p_xdDCUSH6Cg5wmuYBPpLBK3JcXQ&usp=sharing" target="_blank">
+                Zur interaktiven Karte in Google Maps
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">Program</div>
+        <div class="accordion-content">
+          <div class="timetable">
+      
+            <div class="day">Freitag 10.10.2025</div>
+            <div><span class="time">17:00</span> Apero bei Eva-Maria & Christian Zuhause<br><small>Martastrasse 122, 8003 Zürich</small></div>
+      
+            <div class="day">Samstag 11.11.2025</div>
+            <div><span class="time">14:00</span> Trauung im Stadthaus Zürich<br><small>Büro 130, Stadthausquai 17, 8001 Zürich</small></div>
+            <div><span class="time">15:00</span> Treffen vor dem Stadthaus am Münsterplatz<br><small>Stadthausquai 17, 8001 Zürich</small></div>
+            <div><span class="time">15:30</span> Abfahrt am Helmhaus Zürich<br><small>Tramhaltestelle Helmhaus, Richtung Bellevue</small></div>
+            <div><span class="time">17:00</span> Ankunft an der Kalkbreite/Bahnhof Wiedikon<br><small>Tramhaltestelle Kalkbreite/Bhf. Wiedikon</small></div>
+            <div><span class="time">17:30</span> Abendessen in der Wirtschaft im Franz<br><small>Bremgartnerstrasse 18, 8003 Zürich</small></div>
+            <div><span class="time">ab 21:30</span> Feier</div>
+      
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Anfahrt</div>
+        <div class="accordion-content">
+          <div class="arrival">
+            <h4>Zug:</h4>
+            <p>
+              EuroCity-Express Verbindungen zwischen München Hbf und Zürich HB<br>
+              Es verkehren bis zu 8 Direkt-Zugpaare pro Tag, im Wesentlichen im 2-Stunden-Takt<br>
+              mit einer Fahrzeit von ca. 3 Std 32 Min – ohne Umstieg<br>
+              <a href="https://www.bahn.de/reisen/view/verbindung/muenchen/zuerich.shtml" target="_blank">Verbindungen bei der Deutschen Bahn ansehen</a>
+            </p>
+      
+            <h4>Bus:</h4>
+            <p>
+              FlixBus bietet täglich über 10 Busverbindungen zwischen München und Zürich an, ohne Umstieg.<br>
+              Die Fahrzeit liegt typischerweise bei 3 Std 45 Min bis 4 Std.<br>
+              <a href="https://www.flixbus.ch/busverbindung/fernbus-muenchen-zuerich" target="_blank">Verbindungen bei FlixBus ansehen</a>
+            </p>
+          </div>
+        </div>   
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Kontakt</div>
+        <div class="accordion-content">
+          <div class="contact">
+            <div>
+              <strong>Eva-Maria</strong><br>
+              <a href="mailto:mail@eva-maria-beer.de">mail@eva-maria-beer.de</a><br>
+              <span>+49 151 6545 2122</span>
+            </div>
+            <br>
+            <div>
+              <strong>Christian</strong><br>
+              <a href="mailto:christian.felsner@gmail.com">christian.felsner@gmail.com</a><br>
+              <span>+41 77 812 02 91</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const active = header.classList.toggle('active');
+        const content = header.nextElementSibling;
+        if (active) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          content.style.maxHeight = 0;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

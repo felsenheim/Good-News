@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace;
+  font-size: 0.9rem;
+  background-color: #fff;
+  color: #333;
+  padding: 0;
+}
+.header-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
+}
+.header,
+.intro-text {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0.8);
+}
+.header .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+.intro-text p {
+  padding: 1rem 0;
+}
+.accordion {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.accordion-item {
+  background: #fff;
+  overflow: hidden;
+}
+.accordion-header {
+  width: 100%;
+  padding: 12px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  border-top: 3px solid #000;
+  background: #fff;
+  font-size: 1rem;
+}
+.accordion-header:hover {
+  background-color: #f9f9f9;
+}
+.accordion-header::before {
+  content: '\25B6';
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+.accordion-header.active::before {
+  transform: rotate(90deg);
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 20px;
+}
+.accordion-content p {
+  padding: 12px 0;
+  line-height: 1.4;
+}
+.accordion-content iframe {
+  width: 70%;
+  height: 600px;
+  border: none;
+  margin: 10px 0;
+}
+.timetable {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.timetable .time {
+  display: inline-block;
+  width: 80px;
+  font-weight: bold;
+  color: #000;
+}
+.timetable small {
+  display: block;
+  color: #555;
+  margin-left: 80px;
+  font-size: 0.85rem;
+}
+.timetable .day {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #000;
+}
+.map-legend {
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.map-legend .legend-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.map-legend .red {
+  background-color: red;
+}
+
+.map-legend .yellow {
+  background-color: gold;
+}
+
+.map-legend .blue {
+  background-color: royalblue;
+}
+
+.arrival {
+  padding: 1rem 0;
+  line-height: 1.6;
+}
+
+.arrival h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #000;
+}
+.legend-footer {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* ensures no spacing */
+  font-size: 0.9rem;
+}
+
+.legend-note {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.legend-footer a {
+  color: #0056b3;
+  text-decoration: underline;
+}
