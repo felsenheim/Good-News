@@ -1,9 +1,3 @@
-
----
-
-```text
-<!-- LICENSE -->
-
 MIT License
 
 Copyright (c) 2025 Christian Felsner
